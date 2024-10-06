@@ -16,6 +16,11 @@ Connectdb();
 
 app.use('/api/user',userrouter);
 
+app.use('/' ,(req,res)=>{
+    console.log('server is running');
+    res.send('server is running');
+});
+
 const PORT = process.env.PORT
 
 app.listen(PORT, ()=>{
